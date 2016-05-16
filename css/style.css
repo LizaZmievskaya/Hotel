@@ -1,6 +1,6 @@
 html {
-    background-image: url(../img/1.jpg);
-    background-color: rgba(0, 0, 0, 0.4);
+    background-image: url(../img/hotel.jpg);
+    background-color: rgba(0, 0, 0, 0.5);
     background-blend-mode: darken;
     background-attachment: fixed;
     background-size: cover;
@@ -30,21 +30,22 @@ form {
 }*/
 .btn-default {
     margin: 5;
-    width: 350px;
+    width: 360px;
     font-size: 20pt;
-    font-family: "Monotype Corsiva", bold;
+    font-family: bold;
 }
 .list {
-    margin-left: 150px;
+    margin-left: 7px;
     margin-top: 50px;
     width: 360px;
     text-align: center;
     float: left;
 }
+/*
 .report {
     margin-right: 150px;
     margin-top: 50px;
     width: 360px;
     position: relative;
     float: right;
-}
+}*/

@@ -5,4 +5,4 @@ $country = $_POST['country'];
 $stmt = $db->prepare("INSERT INTO countries VALUES ('','$country')");
 $stmt->execute();
 $host  = $_SERVER['HTTP_HOST'];
-header("Location: http://" . $host."/lib/countries.php");
+header("Location: http://" . $host."/lib/svobodnie.php");

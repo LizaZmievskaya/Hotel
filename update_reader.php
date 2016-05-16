@@ -6,4 +6,4 @@ $id = $_POST['id'];
 $stmt = $db->prepare("UPDATE countries SET country = '$country' WHERE country_id = '$id'");
 $stmt->execute();
 $host  = $_SERVER['HTTP_HOST'];
-header("Location: http://" . $host."/lib/countries.php");
+header("Location: http://" . $host."/lib/svobodnie.php");

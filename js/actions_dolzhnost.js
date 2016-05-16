@@ -1,11 +1,12 @@
 $(document).ready(function() {
     //DELETE
-    $('input[name="delete"]').on('click',function (){
+    $('input[name="del"]').on('click',function (){
         var id = $(this).closest('tr').data('id');
+        var dol = 'dolzhnost';
         $.ajax({
-            url:'delete_lang.php',
+            url:'delete_dol.php',
             method:'POST',
-            data: 'id=' + id,
+            data: 'id=' + id + '&table=' + dol,
             type: 'Json',
             success: function(data){
                 data = jQuery.parseJSON(data);
@@ -19,11 +20,11 @@ $(document).ready(function() {
     });
     //ADD
     $('button[name=add]').on('click', function(){
-        var language = $('input#inputLanguage').val();
+        var dol = $('input#inputDol').val();
         $.ajax({
-            url:'add_lang.php',
+            url:'add_dol.php',
             method:'post',
-            data:'language=' + language,
+            data:'dolzhnost=' + dol,
             type:'json',
             success:function(data){
                 $("#addModal").modal("hide");
@@ -33,20 +34,20 @@ $(document).ready(function() {
     //EDIT
     $('button[name=edit]').on('click', function(){
         var id = $(this).closest('tr').data('id');
-        var language = $(this).closest('tr').data('language');
-        $('#editModal').attr('data-id',id,'data-language',language);
-        $('input[name="language"]').val(language);
+        var dol = $(this).closest('tr').data('dol');
+        $('#editModal').attr('data-dol',dol);
+        $('input[name="dolzhnost"]').val(dol);
     });
     $('button[name=save]').on('click', function(){
         var id = $('#editModal').data('id');
-        var language = $('#editModal input[name="language"]').val();
+        var dol = $('#editModal input[name="dolzhnost"]').val();
         $.ajax({
-            url:'update_lang.php',
+            url:'update_dol.php',
             method:'post',
-            data:'id=' + id + '&language=' + language,
+            data:'id=' + id + '&dol=' + dol,
             type:'json',
             success:function(data){
-                $("#addModal").modal("hide");
+                $("#editModal").modal("hide");
             }
         });
     });

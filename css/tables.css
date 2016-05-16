@@ -1,6 +1,6 @@
 html {
-    background-image: url(../img/2.jpg);
-    background-color: rgba(0, 0, 0, 0.5);
+    background-image: url(../img/key.jpg);
+    background-color: rgba(0, 0, 0, 0.6);
     background-blend-mode: darken;
     background-attachment: fixed;
     background-size: cover;
@@ -12,7 +12,7 @@ body {
     background: 0;
 }
 .table {
-    margin-top: 115px;
+    margin-top: 50px;
     color: #ffffff;
 }
 /*@font-face{
@@ -20,23 +20,26 @@ body {
     src: url(../fonts/Monotype-Corsiva-Regular.ttf);
 }*/
 .btn-default {
+
     float: right;
     margin: 5;
     width: 100px;
     font-size: 14pt;
-    font-family: "Monotype Corsiva", bold;
+    font-family: bold;
 }
 #add {
-    margin-top: 20px;
-    width: 300px;
-    float: none;
-    font-size: 25px;
+    margin-right: 10;
+    margin-top: 5px;
+    width: 210px;
+    float: right;
+    font-size: 14pt;
+    font-family: bold;
 }
 #header {
     border: 0;
     padding: 10px;
-    background-image: url(../img/2.jpg);
-    background-color: rgba(0, 0, 0, 0.5);
+    background-image: url(../img/key.jpg);
+    background-color: rgba(0, 0, 0, 0.6);
     background-blend-mode: darken;
     background-attachment: fixed;
     background-size: cover;
@@ -44,10 +47,10 @@ body {
 .title {
     height: 71px;
     border: 0;
-    color: #670b72;
+    color: #460202;
     font-size: 18pt;
-    font-family: "Monotype Corsiva", bold;
-    background-color: rgba(116, 97, 141, 0.5);
+    font-family: bold;
+    background-color: rgba(208, 183, 179, 0.5);
     text-align: center;
     margin-top: 20px;
     margin-bottom: 0;

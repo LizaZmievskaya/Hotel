@@ -1,30 +1,31 @@
 <?php
 namespace lib;
-include "db.php";
-class Countries extends Db {
+include "../db.php";
+class Svobodnie extends Db {
     public function fetchAll(){
         $conn = $this->ConnectDB();
-        $stmt = $conn->prepare("SELECT * FROM `countries` ORDER BY country_id");
+        $stmt = $conn->prepare("SELECT * FROM `nomer` LEFT JOIN `registration`
+ON nomer.nom_komnaty=registration.nom_komnaty WHERE registr_id=0");
         $stmt->execute();
         $result = $stmt->fetchAll();
         return $result;
     }
 }
-$out = new Countries();
+$out = new Svobodnie();
 $rows = $out->fetchAll();
 
 if (isset($_POST['menu'])){
-    header("Location: index.php");
+    header("Location: http://localhost/hotel/index.php");
 }
 ?>
 <!DOCTYPE>
 <html>
 <head>
     <meta charset="utf-8">
-    <link rel="stylesheet" href="css/bootstrap.css">
-    <link rel="stylesheet" href="css/tables.css">
-    <script src="js/jquery-2.1.4.min.js"></script>
-    <script src="js/bootstrap.js"></script>
+    <link rel="stylesheet" href="../css/bootstrap.css">
+    <link rel="stylesheet" href="../css/tables.css">
+    <script src="../js/jquery-2.1.4.min.js"></script>
+    <script src="../js/bootstrap.js"></script>
 </head>
 <body>
 <div class="container">
@@ -121,6 +122,6 @@ if (isset($_POST['menu'])){
         </div>
     </div>
 </div>
-<script src="js/actions_country.js"></script>
+<script src="../js/actions_registr.js"></script>
 </body>
 </html>
