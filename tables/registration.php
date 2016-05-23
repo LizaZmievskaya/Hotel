@@ -27,12 +27,27 @@ ORDER BY registr_id");
         $result = $stmt->fetchAll();
         return $result;
     }
+    public function fetchSotr(){
+        $conn = $this->ConnectDB();
+        $stmt = $conn->prepare("SELECT * FROM `sotrudnik`");
+        $stmt->execute();
+        $result = $stmt->fetchAll();
+        return $result;
+    }
+    public function fetchClient(){
+        $conn = $this->ConnectDB();
+        $stmt = $conn->prepare("SELECT * FROM `client`");
+        $stmt->execute();
+        $result = $stmt->fetchAll();
+        return $result;
+    }
 }
 $out = new Registr();
 $rows = $out->fetchAll();
 $nom = $out->fetchNom();
 $oplata = $out->fetchOplata();
-//$books = $out->fetchBooks();
+$sotr = $out->fetchSotr();
+$client = $out->fetchClient();
 if (isset($_POST['menu'])){
     header("Location: http://localhost/hotel/index.php");
 }
@@ -66,9 +81,10 @@ if (isset($_POST['menu'])){
         <div class="table-responsive">
             <table class="table"  style="text-align: center;">
                 <?php for ($i = 0; $i < count($rows); $i++) {?>
-                    <tr data-id="<?= $rows[$i]['registr_id']?>" data-zas="<?= $rows[$i]['data_zas']?>" data-vis="<?= $rows[$i]['data_vis']?>"
+                    <tr data-id="<?= $rows[$i]['registr_id']?>" data-1="<?= $rows[$i]['data_zas']?>" data-2="<?= $rows[$i]['data_vis']?>"
                         data-pass="<?= $rows[$i]['passport']?>" data-nom="<?= $rows[$i]['nom_komnaty']?>" data-oplata="<?= $rows[$i]['oplata']?>"
-                        data-s-fam="<?= $rows[$i]['s_familia']?>" data-s-imya="<?= $rows[$i]['s_imya']?>">
+                        data-s-fam="<?= $rows[$i]['s_familia']?>" data-s-imya="<?= $rows[$i]['s_imya']?>" data-sid="<?= $rows[$i]['sotrudnik_id']?>"
+                        data-opid="<?= $rows[$i]['oplata_id']?>">
                         <td width="50"><?= $rows[$i]['registr_id']?></td>
                         <td width="120"><?= $rows[$i]['passport']?></td>
                         <td width="120"><?= date('d.m.Y', strtotime($rows[$i]['data_zas']))?></td>
@@ -77,7 +93,7 @@ if (isset($_POST['menu'])){
                         <td width="150"><?= $rows[$i]['oplata']?></td>
                         <td width="115"><?= $rows[$i]['s_familia']?></td>
                         <td width="115"><?= $rows[$i]['s_imya']?></td>
-                        <td><button type="button" class="btn btn-default" data-toggle="modal" data-target="#editModal">Изменить</button>
+                        <td><button name="edit" type="button" class="btn btn-default" data-toggle="modal" data-target="#editModal">Изменить</button>
                             <input name="delete" type="submit" class="btn btn-default" value="Удалить"></td>
                     </tr>
                 <?php } ?>
@@ -96,38 +112,47 @@ if (isset($_POST['menu'])){
                 <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
                 <h4 class="modal-title">Добавление новой записи</h4>
             </div>
-            <form method="post">
+            <form method="post" action="../add_registr.php">
                 <div class="modal-body">
                     <div class="form-horizontal m">
-                        <input name="pass" type="text" class="form-control" id="inputPass" placeholder="№ паспорта">
+                        <label>Серия и № паспорта клиента</label>
+                        <select name="pass" class="form-control" required>
+                            <?php for ($i = 0; $i < count($client); $i++) {?>
+                                <option><?= $client[$i]['passport']?></option>
+                            <?php } ?>
+                        </select>
                     </div>
                     <div class="form-horizontal date m">
                         <label>Дата заселения</label>
-                        <input name="date1" type="date" class="form-control" id="inputData1" min="<?= date('Y-m-d')?>">
+                        <input name="date1" type="date" class="form-control" id="inputData1" required min="<?= date('Y-m-d')?>">
                     </div>
                     <div class="form-horizontal date right m">
                         <label>Дата выселения</label>
-                        <input name="date2" type="date" class="form-control" id="inputData2">
+                        <input name="date2" type="date" class="form-control" required id="inputData2">
                     </div>
                     <div class="form-horizontal m">
-                        <select name="room" class="form-control">
+                        <label>Номер комнаты</label>
+                        <select name="nom" class="form-control" required>
                             <?php for ($i = 0; $i < count($nom); $i++) {?>
                                 <option><?= $nom[$i]['nom_komnaty']?></option>
                             <?php } ?>
                         </select>
                     </div>
                     <div class="form-horizontal m">
-                        <select name="oplata" class="form-control">
+                        <label>Вид оплаты</label>
+                        <select name="oplata" class="form-control" required>
                             <?php for ($i = 0; $i < count($oplata); $i++) {?>
-                                <option><?= $oplata[$i]['oplata']?></option>
+                                <option value="<?= $oplata[$i]['oplata_id']?>"><?= $oplata[$i]['oplata']?></option>
                             <?php } ?>
                         </select>
                     </div>
                     <div class="form-horizontal m">
-                        <input name="sname" type="text" class="form-control" id="inputSname" placeholder="Фамилия сотрудника">
-                    </div>
-                    <div class="form-horizontal m">
-                        <input name="fname" type="text" class="form-control" id="inputFname" placeholder="Имя сотрудника">
+                        <label>Сотрудник</label>
+                        <select name="sotr" class="form-control" required>
+                            <?php for ($i = 0; $i < count($sotr); $i++) {?>
+                                <option><?= $sotr[$i]['sotrudnik_id']?></option>
+                            <?php } ?>
+                        </select>
                     </div>
                 </div>
                 <div class="modal-footer">
@@ -146,38 +171,45 @@ if (isset($_POST['menu'])){
                 <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
                 <h4 class="modal-title">Редактирование записи</h4>
             </div>
-            <form method="post">
+            <form method="post" action="../update_registr.php">
                 <div class="modal-body">
                     <div class="form-horizontal m">
-                        <input name="pass" type="text" class="form-control" id="inputPass" placeholder="№ паспорта">
+                        <input name="id" type="hidden" class="form-control" id="inputID">
+                    </div>
+                    <div class="form-horizontal m">
+                        <input name="pass" type="text" class="form-control" id="inputPass" readonly placeholder="№ паспорта">
                     </div>
                     <div class="form-horizontal date m">
                         <label>Дата заселения</label>
-                        <input name="date1" type="date" class="form-control" id="inputData1" min="<?= date('Y-m-d')?>">
+                        <input name="date1" type="date" class="form-control" id="inputData1" required min="<?= date('Y-m-d')?>">
                     </div>
                     <div class="form-horizontal date right m">
                         <label>Дата выселения</label>
-                        <input name="date2" type="date" class="form-control" id="inputData2">
+                        <input name="date2" type="date" class="form-control" required id="inputData2">
                     </div>
                     <div class="form-horizontal m">
-                        <select name="room" class="form-control">
+                        <label>Номер комнаты</label>
+                        <select name="nom" class="form-control" required>
                             <?php for ($i = 0; $i < count($nom); $i++) {?>
                                 <option><?= $nom[$i]['nom_komnaty']?></option>
                             <?php } ?>
                         </select>
                     </div>
                     <div class="form-horizontal m">
-                        <select name="oplata" class="form-control">
+                        <label>Вид оплаты</label>
+                        <select name="oplata" class="form-control" required>
                             <?php for ($i = 0; $i < count($oplata); $i++) {?>
-                                <option><?= $oplata[$i]['oplata']?></option>
+                                <option value="<?= $oplata[$i]['oplata_id']?>"><?= $oplata[$i]['oplata']?></option>
                             <?php } ?>
                         </select>
                     </div>
                     <div class="form-horizontal m">
-                        <input name="sname" type="text" class="form-control" id="inputSname" placeholder="Фамилия сотрудника">
-                    </div>
-                    <div class="form-horizontal m">
-                        <input name="fname" type="text" class="form-control" id="inputFname" placeholder="Имя сотрудника">
+                        <label>Сотрудник</label>
+                        <select name="sotr" class="form-control" required>
+                            <?php for ($i = 0; $i < count($sotr); $i++) {?>
+                                <option><?= $sotr[$i]['sotrudnik_id']?></option>
+                            <?php } ?>
+                        </select>
                     </div>
                 </div>
                 <div class="modal-footer">

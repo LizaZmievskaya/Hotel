@@ -45,7 +45,7 @@ if (isset($_POST['menu'])){
                         <td width="150"><?= $rows[$i]['dolzhnost_id']?></td>
                         <td width="700"><?= $rows[$i]['dolzhnost']?></td>
                         <td><button name="edit" type="button" class="btn btn-default" data-toggle="modal" data-target="#editModal">Изменить</button>
-                            <input name="del" type="submit" class="btn btn-default" value="Удалить"></td>
+                            <input name="delete" type="submit" class="btn btn-default" value="Удалить"></td>
                     </tr>
                 <?php } ?>
             </table>
@@ -54,49 +54,49 @@ if (isset($_POST['menu'])){
         <button name="menu" type="submit" id="add" class="btn btn-default" style="float: left;">Главное меню</button>
     </form>
 </div>
-    <!--ADD MODAL-->
-    <div class="modal fade" id="addModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                    <h4 class="modal-title">Добавление новой записи</h4>
-                </div>
-                <form method="post" action="../add_dol.php">
-                    <div class="modal-body">
-                        <div class="form-horizontal m">
-                            <input name="dolzhnost" type="text" class="form-control" id="inputDol" placeholder="Должность">
-                        </div>
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-default" data-dismiss="modal">Закрыть</button>
-                        <button name="add" type="submit" class="btn btn-default">Сохранить</button>
-                    </div>
-                </form>
+<!--ADD MODAL-->
+<div class="modal fade" id="addModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h4 class="modal-title">Добавление новой записи</h4>
             </div>
+            <form method="post">
+                <div class="modal-body">
+                    <div class="form-horizontal">
+                        <input name="dolzhnost" type="text" class="form-control" id="inputDolzhnost" placeholder="Должность">
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Закрыть</button>
+                    <button name="add" type="submit" class="btn btn-default">Сохранить</button>
+                </div>
+            </form>
         </div>
     </div>
+</div>
 <!--EDIT MODAL-->
 <div class="modal fade" id="editModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                    <h4 class="modal-title">Редактирование записи</h4>
-                </div>
-                <form method="post">
-                    <div class="modal-body">
-                        <div class="form-horizontal m">
-                            <input name="dolzhnost" type="text" class="form-control" id="inputDol" placeholder="Должность">
-                        </div>
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-default" data-dismiss="modal">Закрыть</button>
-                        <button name="add" type="submit" class="btn btn-default">Сохранить</button>
-                    </div>
-                </form>
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h4 class="modal-title">Редактирование записи</h4>
             </div>
+            <form method="post" action="../update_dol.php">
+                <div class="modal-body">
+                    <div class="form-horizontal">
+                        <input name="dolzhnost" type="text" class="form-control" id="inputDolzhnost" placeholder="Должность">
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Закрыть</button>
+                    <button name="save" type="submit" class="btn btn-default">Сохранить</button>
+                </div>
+            </form>
         </div>
+    </div>
 </div>
 <script src="../js/actions_dolzhnost.js"></script>
 </body>

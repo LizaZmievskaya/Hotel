@@ -4,10 +4,9 @@ include "../db.php";
 class Popular extends Db {
     public function fetchAll(){
         $conn = $this->ConnectDB();
-        $stmt = $conn->prepare("SELECT COUNT(book_name) AS num, book_name, auth_name
-FROM `output` LEFT JOIN `books` ON books.book_id=output.book_id
-LEFT JOIN `authors` ON books.author_id=authors.author_id
-WHERE MONTH(output_date)=MONTH(CURDATE()) GROUP BY book_name ORDER BY COUNT(book_name) DESC");
+        $stmt = $conn->prepare("SELECT registration.passport, client.familia, sotrudnik.s_familia
+FROM `sotrudnik` INNER JOIN (`client` INNER JOIN `registration` ON client.passport=registration.passport)
+ON sotrudnik.sotrudnik_id=registration.sotrudnik_id");
         $stmt->execute();
         $result = $stmt->fetchAll();
         return $result;
@@ -33,12 +32,11 @@ if (isset($_POST['menu'])){
 <div class="container">
     <form method="post">
         <nav id="header" class="navbar navbar-default navbar-fixed-top container" role="navigation">
-            <button name="menu" type="submit" id="add" class="btn btn-default" style="float: right;">Главное меню</button>
             <table class="title table table-striped">
                 <tr>
-                    <td width="150">Была выдана раз</td>
-                    <td width="500">Книга</td>
-                    <td width="500">Автор</td>
+                    <td width="200">Серия и № паспорта клиента</td>
+                    <td width="450">Фамилия клиента</td>
+                    <td width="450">Фамилия сотрудника</td>
                     <td></td>
                 </tr>
             </table>
@@ -47,13 +45,14 @@ if (isset($_POST['menu'])){
             <table class="table table-striped"  style="text-align: center;">
                 <?php for ($i = 0; $i < count($rows); $i++) {?>
                     <tr>
-                        <td width="150"><?= $rows[$i]['num']?></td>
-                        <td width="500"><?= $rows[$i]['book_name']?></td>
-                        <td width="500"><?= $rows[$i]['auth_name']?></td>
+                        <td width="200"><?= $rows[$i]['passport']?></td>
+                        <td width="450"><?= $rows[$i]['familia']?></td>
+                        <td width="450"><?= $rows[$i]['s_familia']?></td>
                     </tr>
                 <?php } ?>
             </table>
         </div>
+        <button name="menu" type="submit" id="add" class="btn btn-default" style="float: left;">Главное меню</button>
     </form>
 </div>
 </body>
