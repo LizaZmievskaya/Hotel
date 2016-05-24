@@ -2,46 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0a1893ef-8a7f-402b-a5bf-c7b4357d5bf8" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/add_class.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/add_client.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/add_nomer.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/add_registr.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/add_sotr.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/delete.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/actions_clienty.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/actions_nomera.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/update_class.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/update_client.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/update_dol.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/update_nomer.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/update_registr.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/update_sotr.php" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/add_country.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/add_out.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/add_reader.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/delete_country.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/delete_dol.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/delete_out.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/delete_reader.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/update_country.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/update_lang.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/update_reader.php" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/add_dol.php" afterPath="$PROJECT_DIR$/add_dol.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db.php" afterPath="$PROJECT_DIR$/db.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.php" afterPath="$PROJECT_DIR$/index.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/actions_dolzhnost.js" afterPath="$PROJECT_DIR$/js/actions_dolzhnost.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/actions_registr.js" afterPath="$PROJECT_DIR$/js/actions_registr.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tables/class.php" afterPath="$PROJECT_DIR$/tables/class.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tables/clienty.php" afterPath="$PROJECT_DIR$/tables/clienty.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tables/dolzhnost.php" afterPath="$PROJECT_DIR$/tables/dolzhnost.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tables/nomera.php" afterPath="$PROJECT_DIR$/tables/nomera.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tables/registration.php" afterPath="$PROJECT_DIR$/tables/registration.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tables/sotrudniki.php" afterPath="$PROJECT_DIR$/tables/sotrudniki.php" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/js/actions_output.js" afterPath="$PROJECT_DIR$/js/actions_sotrudnik.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/js/actions_readers.js" afterPath="$PROJECT_DIR$/js/actions_class.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/tables/popular.php" afterPath="$PROJECT_DIR$/tables/oformlenie.php" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/tables/svobodnie.php" afterPath="$PROJECT_DIR$/tables/kolichestvo.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tables/kolichestvo.php" afterPath="$PROJECT_DIR$/tables/kolichestvo.php" />
     </list>
     <ignored path="lib.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -63,11 +25,33 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="index.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="index.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.23448277">
+            <state vertical-scroll-proportion="-0.65384614">
               <caret line="8" column="41" selection-start-line="8" selection-start-column="41" selection-end-line="8" selection-end-column="41" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="kolichestvo.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/tables/kolichestvo.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.9413793">
+              <caret line="80" column="7" selection-start-line="80" selection-start-column="7" selection-end-line="80" selection-end-column="7" />
+              <folding>
+                <marker date="1464084197622" expanded="true" signature="483:983" placeholder="SELECT regis... class_nomera" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="registration.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/tables/registration.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="129" column="53" selection-start-line="129" selection-start-column="53" selection-end-line="130" selection-end-column="102" />
               <folding />
             </state>
           </provider>
@@ -122,7 +106,6 @@
         <option value="$PROJECT_DIR$/js/actions_clienty.js" />
         <option value="$PROJECT_DIR$/tables/registration.php" />
         <option value="$PROJECT_DIR$/js/actions_registr.js" />
-        <option value="$PROJECT_DIR$/tables/kolichestvo.php" />
         <option value="$PROJECT_DIR$/index.php" />
         <option value="$PROJECT_DIR$/tables/oformlenie.php" />
         <option value="$PROJECT_DIR$/db.php" />
@@ -139,6 +122,7 @@
         <option value="$PROJECT_DIR$/update_nomer.php" />
         <option value="$PROJECT_DIR$/update_registr.php" />
         <option value="$PROJECT_DIR$/update_sotr.php" />
+        <option value="$PROJECT_DIR$/tables/kolichestvo.php" />
       </list>
     </option>
   </component>
@@ -154,7 +138,7 @@
   <component name="ProjectFrameBounds">
     <option name="x" value="-8" />
     <option name="y" value="-8" />
-    <option name="width" value="1378" />
+    <option name="width" value="1382" />
     <option name="height" value="744" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
@@ -182,7 +166,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -201,14 +184,43 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="lib" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="hotel" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="tables" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="lib" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="hotel" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="js" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
       <pane id="Scope" />
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../kpp" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../zmievskaya.liza/hotel" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -265,10 +277,10 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1378" height="744" extended-state="0" />
-    <editor active="false" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.15785609" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.121522695" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329653" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -484,20 +496,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/actions_nomera.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.22442244">
-          <caret line="8" column="26" selection-start-line="8" selection-start-column="26" selection-end-line="8" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tables/nomera.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.38448277">
-          <caret line="139" column="51" selection-start-line="139" selection-start-column="51" selection-end-line="139" selection-end-column="51" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/js/actions_clienty.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.6914191">
@@ -526,20 +524,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/tables/clienty.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-2.1923077">
-          <caret line="34" column="21" selection-start-line="34" selection-start-column="21" selection-end-line="40" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tables/registration.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-11.846154">
-          <caret line="103" column="8" selection-start-line="103" selection-start-column="8" selection-end-line="103" selection-end-column="117" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/tables/oformlenie.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.7362069">
@@ -547,20 +531,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/tables/kolichestvo.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6775862">
-          <caret line="68" column="14" selection-start-line="68" selection-start-column="14" selection-end-line="69" selection-end-column="117" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/tables/class.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="2.462069">
           <caret line="84" column="53" selection-start-line="84" selection-start-column="53" selection-end-line="84" selection-end-column="53" />
-          <folding>
-            <marker date="1463918958129" expanded="true" signature="169:218" placeholder="SELECT * FRO... class_nomera" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -576,9 +550,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.029310346">
           <caret line="1" column="62" selection-start-line="1" selection-start-column="62" selection-end-line="1" selection-end-column="62" />
-          <folding>
-            <marker date="1464035775012" expanded="true" signature="239:307" placeholder="INSERT INTO sotrudnik... " />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -586,10 +557,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.029310346">
           <caret line="1" column="62" selection-start-line="1" selection-start-column="62" selection-end-line="1" selection-end-column="62" />
-          <folding>
-            <marker date="1464035780475" expanded="true" signature="269:335" placeholder="SELECT s_fam... sotrudnik" />
-            <marker date="1464035780475" expanded="true" signature="456:539" placeholder="INSERT INTO client... " />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -597,9 +564,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.029310346">
           <caret line="1" column="62" selection-start-line="1" selection-start-column="62" selection-end-line="1" selection-end-column="62" />
-          <folding>
-            <marker date="1464035786319" expanded="true" signature="296:375" placeholder="INSERT INTO nomer... " />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -607,9 +571,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.029310346">
           <caret line="1" column="62" selection-start-line="1" selection-start-column="62" selection-end-line="1" selection-end-column="62" />
-          <folding>
-            <marker date="1464035794449" expanded="true" signature="151:191" placeholder="INSERT INTO dolzhnost... " />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -617,9 +578,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.029310346">
           <caret line="1" column="62" selection-start-line="1" selection-start-column="62" selection-end-line="1" selection-end-column="62" />
-          <folding>
-            <marker date="1464035799933" expanded="true" signature="261:333" placeholder="INSERT INTO client... " />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -627,9 +585,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.029310346">
           <caret line="1" column="62" selection-start-line="1" selection-start-column="62" selection-end-line="1" selection-end-column="62" />
-          <folding>
-            <marker date="1464035804871" expanded="true" signature="179:235" placeholder="INSERT INTO class_nomera... " />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -637,9 +592,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-0.65384614">
           <caret line="1" column="62" selection-start-line="1" selection-start-column="62" selection-end-line="1" selection-end-column="62" />
-          <folding>
-            <marker date="1464035812439" expanded="true" signature="195:234" placeholder="DELETE FROM " />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -647,9 +599,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.029310346">
           <caret line="1" column="62" selection-start-line="1" selection-start-column="62" selection-end-line="1" selection-end-column="62" />
-          <folding>
-            <marker date="1464035817495" expanded="true" signature="199:296" placeholder="UPDATE class... " />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -657,9 +606,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.029310346">
           <caret line="1" column="62" selection-start-line="1" selection-start-column="62" selection-end-line="1" selection-end-column="62" />
-          <folding>
-            <marker date="1464035823267" expanded="true" signature="261:408" placeholder="UPDATE `clie... " />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -667,9 +613,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.029310346">
           <caret line="1" column="62" selection-start-line="1" selection-start-column="62" selection-end-line="1" selection-end-column="62" />
-          <folding>
-            <marker date="1464035827923" expanded="true" signature="177:249" placeholder="UPDATE dolzh... " />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -677,9 +620,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.029310346">
           <caret line="1" column="62" selection-start-line="1" selection-start-column="62" selection-end-line="1" selection-end-column="62" />
-          <folding>
-            <marker date="1464035833002" expanded="true" signature="296:451" placeholder="UPDATE nomer... " />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -687,9 +627,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.029310346">
           <caret line="1" column="62" selection-start-line="1" selection-start-column="62" selection-end-line="1" selection-end-column="62" />
-          <folding>
-            <marker date="1464035839432" expanded="true" signature="289:463" placeholder="UPDATE sotru... " />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -697,17 +634,58 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.029310346">
           <caret line="1" column="62" selection-start-line="1" selection-start-column="62" selection-end-line="1" selection-end-column="62" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tables/clienty.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-2.1948276">
+          <caret line="34" column="21" selection-start-line="34" selection-start-column="21" selection-end-line="40" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tables/registration.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="129" column="53" selection-start-line="129" selection-start-column="53" selection-end-line="130" selection-end-column="102" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/actions_nomera.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.44884488">
+          <caret line="61" column="8" selection-start-line="61" selection-start-column="8" selection-end-line="61" selection-end-column="46" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tables/nomera.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.44310346">
+          <caret line="153" column="33" selection-start-line="153" selection-start-column="33" selection-end-line="153" selection-end-column="33" />
           <folding>
-            <marker date="1464035846226" expanded="true" signature="259:403" placeholder="UPDATE dolzh... " />
+            <marker date="1463923827764" expanded="true" signature="167:274" placeholder="SELECT * FRO... nomer" />
+            <marker date="1463923827764" expanded="true" signature="473:501" placeholder="SELECT * FRO... class_nomera" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/index.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.23448277">
+        <state vertical-scroll-proportion="-0.65384614">
           <caret line="8" column="41" selection-start-line="8" selection-start-column="41" selection-end-line="8" selection-end-column="41" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tables/kolichestvo.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.9413793">
+          <caret line="80" column="7" selection-start-line="80" selection-start-column="7" selection-end-line="80" selection-end-column="7" />
+          <folding>
+            <marker date="1464084197622" expanded="true" signature="483:983" placeholder="SELECT regis... class_nomera" />
+          </folding>
         </state>
       </provider>
     </entry>
