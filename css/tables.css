@@ -69,3 +69,10 @@ td.title {
 .m {
     margin-bottom: 20px;
 }
+#chartdiv{
+    background-image: url(../img/key.jpg);
+    background-color: rgba(0, 0, 0, 0.6);
+    background-blend-mode: darken;
+    background-attachment: fixed;
+    background-size: cover;
+}

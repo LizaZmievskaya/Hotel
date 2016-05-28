@@ -14,6 +14,8 @@ if (isset($_POST['registration'])){
 } elseif (isset($_POST['svobodnie'])){
     header("Location: tables/kolichestvo.php");
 } elseif (isset($_POST['popular'])){
+    header("Location: tables/popular.php");
+} elseif (isset($_POST['oformlenie'])){
     header("Location: tables/oformlenie.php");
 }
 ?>
@@ -34,8 +36,9 @@ if (isset($_POST['registration'])){
             <button name="class" type="submit" class="btn btn-default">Классы номеров</button>
             <button name="sotrudniki" type="submit" class="btn btn-default">Сотрудники</button>
             <button name="dolzhnost" type="submit" class="btn btn-default">Должности</button>
-            <button name="svobodnie" type="submit"  class="btn btn-default" style="margin-top: 50px;">Кол-во дней проживания</button>
-            <button name="popular" type="submit" class="btn btn-default">Оформление</button>
+            <button name="svobodnie" type="submit"  class="btn btn-default" style="margin-top: 30px;">Кол-во дней проживания</button>
+            <button name="oformlenie" type="submit" class="btn btn-default">Оформление</button>
+            <button name="popular" type="submit" class="btn btn-default">Популярность номеров</button>
         </div>
     </form>
 

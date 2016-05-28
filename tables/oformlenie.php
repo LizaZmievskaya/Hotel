@@ -15,9 +15,9 @@ ON sotrudnik.sotrudnik_id=registration.sotrudnik_id");
 $out = new Popular();
 $rows = $out->fetchAll();
 
-if (isset($_POST['menu'])){
+/*if (isset($_POST['menu'])){
     header("Location: http://localhost/hotel/index.php");
-}
+}*/
 ?>
 <!DOCTYPE>
 <html>
@@ -30,7 +30,7 @@ if (isset($_POST['menu'])){
 </head>
 <body>
 <div class="container">
-    <form method="post">
+    <form method="post" action="../print.php">
         <nav id="header" class="navbar navbar-default navbar-fixed-top container" role="navigation">
             <table class="title table table-striped">
                 <tr>
@@ -52,7 +52,8 @@ if (isset($_POST['menu'])){
                 <?php } ?>
             </table>
         </div>
-        <button name="menu" type="submit" id="add" class="btn btn-default" style="float: left;">Главное меню</button>
+        <button name="menu" type="button" id="add" class="btn btn-default" style="float: left;" onclick="location.href='http://localhost/hotel/index.php'" id="header" Style="cursor: pointer;"">Главное меню</button>
+        <input name="print" type="submit" id="add" class="btn btn-default" style="float: right;" value="PDF">
     </form>
 </div>
 </body>
